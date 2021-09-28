@@ -44,3 +44,28 @@ function lovefunc(flower1, flower2){
     }
     return finalArr.join(' ')
   }
+  //Vowel Count
+  function getCount(str) {
+    var vowelsCount = 0;
+    let vowels = "aeiou"
+    let vowelsArr = vowels.toLowerCase().split("")
+  
+    for(let i = 0; i < str.length; i++){
+    if(vowelsArr.includes(str[i])){
+      vowelsCount++
+    }
+  }  
+    return vowelsCount
+  }
+  
+  getCount('jonah and devin and sam')
+
+  //Square Every Digit
+  function squareDigits(num){
+    let arr = num.toString().split("")
+    for(let i = 0; i < arr.length; i++){
+     arr[i] = Math.pow(arr[i], 2)
+    }
+    console.log(arr.join(""))
+   return+arr.join("")
+  }
