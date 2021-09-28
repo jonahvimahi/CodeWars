@@ -83,3 +83,15 @@ function lovefunc(flower1, flower2){
       return sum
     }
   }
+
+  //Build Tower
+  function towerBuilder(nFloors) {
+    let building = []
+    for(let i = 1; i <= nFloors; i++){
+      let floorsLeft = nFloors-i
+      let floorSpace = " ".repeat(floorsLeft)
+      let floor = '*'.repeat((i*2)-1)
+      building.push(`${floorSpace}${floor}${floorSpace}`)
+  }
+    return building
+  }
