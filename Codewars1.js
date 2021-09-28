@@ -69,3 +69,17 @@ function lovefunc(flower1, flower2){
     console.log(arr.join(""))
    return+arr.join("")
   }
+
+  //Sum of Digits / Digital Root
+  function digital_root(n) {
+    let sum = 0
+    let arr = n.toString().split("")
+    for(let i = 0; i < arr.length; i++){
+      sum += +arr[i]
+    }
+    if(sum.toString().length > 1){
+      return digital_root(sum)
+    } else {
+      return sum
+    }
+  }
