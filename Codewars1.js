@@ -109,3 +109,19 @@ function lovefunc(flower1, flower2){
     return oddNums[Object.keys(oddNums)[0]];
   }
   findOdd([5,4,3,2,1,5,4,3,2,10,10])
+
+  //Move Zeroes
+  var moveZeros = function (arr) {
+    let zeroArr = []
+    let otherArr = []
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] === 0){
+        zeroArr.push(0)
+      } else {
+        otherArr.push(arr[i])
+      }
+    }
+    let finalArr = [...otherArr, ...zeroArr]
+    return finalArr
+  }
+  moveZeros([1,2,0,1,0,1,0,3,0,1])
