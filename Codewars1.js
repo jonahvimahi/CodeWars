@@ -95,3 +95,17 @@ function lovefunc(flower1, flower2){
   }
     return building
   }
+
+  //Find the odd int
+  function findOdd(A) {
+    let oddNums = {}
+    for(let i = 0; i < A.length; i++){
+      if(oddNums.hasOwnProperty(A[i])){
+        delete oddNums[A[i]]
+      } else{
+        oddNums[A[i]] = A[i]
+      }
+    }
+    return oddNums[Object.keys(oddNums)[0]];
+  }
+  findOdd([5,4,3,2,1,5,4,3,2,10,10])
