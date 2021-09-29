@@ -125,3 +125,16 @@ function lovefunc(flower1, flower2){
     return finalArr
   }
   moveZeros([1,2,0,1,0,1,0,3,0,1])
+
+  //Stop spinning my word 
+  function spinWords(string){
+    let arr = string.split(" ")
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i].length >= 5){
+        let word = arr[i].split("").reverse().join("")
+        arr[i] = word
+      }
+    
+    }
+    return arr.join(" ")
+  }
