@@ -138,3 +138,35 @@ function lovefunc(flower1, flower2){
     }
     return arr.join(" ")
   }
+  //THIS IS A LEVEL 4
+    //THIS IS A LEVEL 4
+      //THIS IS A LEVEL 4
+        //THIS IS A LEVEL 4
+        function add(a, b) {
+          let arrA = a.split('').reverse()
+          let arrB = b.split('').reverse()
+          let answerStr = ''
+          let remainder = 0
+          for (let i=0; i < Math.max(a.length, b.length); i++) {
+            let num1 = 0;
+            let num2 = 0;
+            if (arrA[i]) {
+              num1 = +arrA[i]
+            }
+            if (arrB[i]) {
+              num2 = +arrB[i]
+            }
+            let answer = num1 + num2 + remainder
+            remainder = 0
+            if (answer > 9) {
+              answerStr += (answer - 10).toString()
+              remainder = 1
+            } else {
+              answerStr += answer.toString()
+            }
+          }
+          if (remainder === 1) {
+            answerStr += '1'
+          }
+          return answerStr.split('').reverse().join('')
+        }
