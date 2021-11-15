@@ -170,3 +170,22 @@ function lovefunc(flower1, flower2){
           }
           return answerStr.split('').reverse().join('')
         }
+
+
+// You're a square!
+const isSquare = function(n){
+  return Math.sqrt(n) % 1 === 0;
+}
+
+// Multiples of 3 0r 5
+
+function solution(number){
+  let multiples = []
+  
+  for(let i = 0; i < number; i++){
+    if(number % 5 === 0 || number % 3 === 0){
+      multiples.push(i)
+    }
+  }
+  return multiples.reduce((a,b) => a + b, 0)
+}
